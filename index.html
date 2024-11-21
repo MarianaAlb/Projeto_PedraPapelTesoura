@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel, Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="inicio" class="conteudo">
+        <h1>Bem-vindo ao jogo!</h1>
+        <button onclick="mostrarSecao('regras')">Iniciar Jogo</button>
+    </section>
+    <section id="regras" class="conteudo">
+        <h2>Regras do Jogo:</h2>
+        <ul>
+            <li>Pedra ganha da tesoura.</li>
+            <li>Tesoura ganha do papel.</li>
+            <li>Papel ganha da pedra.</li>
+        </ul>
+        <button onclick="mostrarSecao('jogo')">Jogar</button>
+    </section>
+    <section id="jogo" class="conteudo">
+        <h2>Vamos Jogar!</h2>
+        <label>
+            <input type="radio" class="pedra" name="jogar" value="pedra">
+            <img src="./imagens/pedra.png" class="imagem">
+        </label>
+        <label>
+            <input type="radio" class="papel" name="jogar" value="papel">
+            <img class="imagem" src="./imagens/papel.png">
+        </label>
+        <label>
+            <input type="radio" class="tesoura" name="jogar" value="tesoura">
+            <img src="./imagens/tesoura.png" class="imagem">   
+        </label>
+        <div>
+            <button onclick="adivinhar()" class="botao-jogo">3, 2, 1... Já</button>
+        </div>
+        <div class="resultados-jogo" id="resultados-jogo"></div>
+        <div class="tabela-resultado">
+            <div id="vitoria">
+                Vitórias: <span id="vitorias"> </span> 
+            </div>
+            <div id="derrota">
+                Derrotas: <span id="derrotas"> </span> 
+            </div>
+            <div id="tentativa">
+                Tentativas: <span id="tentativas"> </span> 
+            </div>
+        </div>
+        <button onclick="resetar()" class="botao-jogo">Resetar</button>
+    </section>
+    <script src="java.js"></script>
+</body>
+</html>
